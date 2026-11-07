@@ -4,99 +4,99 @@ Site statique (un seul fichier `index.html`), servi par nginx et déployé autom
 
 **Mise en ligne automatique :** chaque `git push` sur la branche `main` redéploie le site en 1 à 2 minutes. Rien d'autre à faire.
 
+## Où en est le site
+
+| Élément | État |
+|---|---|
+| Site, HTTPS, polices hébergées avec le site | en ligne |
+| Photos de Céline et de Thierry | en ligne (`photos/celine.jpg`, `photos/thierry.jpg`) |
+| 4 démos vidéo (lecteur qui s'ouvre au clic) | en ligne (`videos/`) |
+| Boutons « Écrire un mail » (2) | branchés sur l'adresse Gmail de Céline |
+| Boutons « Parlons-en » et « Réserver un appel en visio » (3) | branchés sur la page de réservation Google Agenda (appel de 30 min, avec Google Meet) |
+
 ## Contenu du dépôt
 
 | Élément | Rôle |
 |---|---|
-| `index.html` | La page complète |
-| `fonts/` | Les polices (hébergées avec le site) |
-| `photos/` | Photos de Céline et de Thierry (vide pour l'instant) |
-| `videos/` | Vidéos de démo en MP4 (vide pour l'instant) |
+| `index.html` | La page complète (styles et lecteur vidéo inclus) |
+| `fonts/` | Les polices (Fredoka, Nunito), hébergées avec le site |
+| `photos/` | Photos de Céline et de Thierry |
+| `videos/` | 4 vidéos MP4 et leurs images d'aperçu (`-poster.jpg`) |
 | `Dockerfile` | Sert à la mise en ligne, ne pas modifier |
 
-## Ce qui reste à remplacer dans `index.html`
-
-| Quoi | Où le trouver dans le fichier | Nombre |
-|---|---|---|
-| Lien de réservation | boutons marqués `data-reserver`, à remplacer `href="#contact"` | 3 |
-| Adresse mail | boutons marqués `data-ecrire`, remplacer `contact@bahlia.fr` | 3 |
-| Photos | cercles « Photo de Céline » et « Photo de Thierry » | 2 |
-| Vidéos | cartes « Démo vidéo à venir » (format 16/9) | 4 |
+Les 4 démos : `appel-manque-sms`, `devis-en-un-message`, `factures-relancees`, `avis-google` (chacune : un `.mp4` et un `-poster.jpg`).
 
 ---
 
-## Ajouter les photos (pas à pas)
+## Modifier le site : le plus simple
 
-**Avant de commencer**
-- Format : JPG ou WebP. Photo carrée de préférence, visage centré.
-- Taille : environ 400 x 400 pixels, moins de 200 Ko chacune (la page reste rapide).
-- Noms de fichiers simples, sans espace ni accent : `celine.jpg`, `thierry.jpg`.
+Demander à Claude Code, dans le dossier du site, avec une phrase claire. Il modifie `index.html`, fait le commit et le push, puis le site est à jour 1 à 2 minutes plus tard.
 
-**Étapes**
-1. Ouvre le dossier du site sur ton Mac (`~/Documents/bahlia-site`).
-2. Glisse `celine.jpg` et `thierry.jpg` dans le dossier **photos**.
-3. Remplace les deux cercles dans `index.html` (voir le prompt ci-dessous, ou demande à Claude de le faire).
-4. Envoie en ligne : copie cette ligne dans le Terminal.
+**Changer un texte**
+
+```text
+Dans index.html, remplace « ancien texte » par « nouveau texte ». Ne change rien d'autre. Fais le commit et le push.
+```
+
+**Changer l'adresse mail affichée** (2 boutons « Écrire un mail »)
+
+```text
+Dans index.html, remplace l'adresse des deux boutons « Écrire un mail » (liens mailto:) par [NOUVELLE ADRESSE]. Ne change rien d'autre. Fais le commit et le push.
+```
+
+**Changer le lien de réservation** (3 boutons : « Parlons-en » et les deux « Réserver un appel en visio »)
+
+```text
+Dans index.html, remplace le lien Google Agenda des 3 boutons marqués data-reserver par [NOUVEAU LIEN]. Garde target="_blank" rel="noopener". Ne change rien d'autre. Fais le commit et le push.
+```
+
+**Changer une photo**
+
+Mets la nouvelle photo carrée (environ 400 x 400 px, moins de 200 Ko) dans `photos/` avec le **même nom** (`celine.jpg` ou `thierry.jpg`) : la page n'a alors pas besoin d'être modifiée.
+
+---
+
+## Remplacer une vidéo de démo
+
+Règles pour que ça se passe bien :
+- Même nom de fichier que l'ancienne vidéo (par exemple `videos/avis-google.mp4`) : la page n'a alors pas besoin d'être modifiée.
+- Remplacer aussi l'image d'aperçu `videos/avis-google-poster.jpg` (sans sous-titres incrustés).
+- Format 16/9 (1280 x 720), H.264, son AAC mono, durée d'environ 20 secondes, poids de 0,5 à 1 Mo si possible.
+- Les vidéos sont en cache un mois dans les navigateurs. Si une vidéo remplacée ne change pas à l'écran, utilise un **nouveau nom de fichier** et fais modifier la page en conséquence.
+
+Pour réencoder une vidéo pour le web (ffmpeg) :
 
 ```bash
-cd ~/Documents/bahlia-site && git add -A && git commit -m "Ajout des photos" && git push
+ffmpeg -i nouvelle_video.mp4 -c:v libx264 -crf 24 -preset slow -profile:v high -level 4.0 \
+  -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k -ac 1 videos/NOM.mp4
 ```
 
-5. Attends 1 à 2 minutes, puis recharge https://bahlia.fr avec `Cmd + Maj + R`.
-
-**Prompt à copier dans Claude Code**
-
-```text
-Dans le dépôt bahlia-site, remplace les deux cercles « Photo de Céline » et « Photo de Thierry » de index.html par les images photos/celine.jpg et photos/thierry.jpg.
-Garde exactement le même cercle (104 x 104 px, border-radius 50 %), avec object-fit: cover, et un attribut alt « Photo de Céline » / « Photo de Thierry ».
-Ne change rien d'autre dans la page. Vérifie l'affichage sur mobile et ordinateur, puis fais le commit et le push.
-```
-
----
-
-## Ajouter les vidéos (pas à pas)
-
-**Avant de commencer**
-- Format : MP4 (codec H.264), format 16/9 (1280 x 720 conseillé).
-- Durée : 20 à 45 secondes par démo.
-- Poids : **moins de 10 Mo par vidéo** si possible. GitHub refuse les fichiers de plus de 100 Mo, et une vidéo lourde ralentit le site.
-- Noms simples, sans espace ni accent : `demo-1.mp4`, `demo-2.mp4`, `demo-3.mp4`, `demo-4.mp4`.
-- Pour alléger une vidéo : l'application gratuite HandBrake, préréglage « Fast 720p30 ».
-- Une image d'aperçu (optionnelle) : `demo-1.jpg`, mêmes noms, dans `videos/`.
-
-**Étapes**
-1. Glisse les vidéos dans le dossier **videos** de `~/Documents/bahlia-site`.
-2. Remplace les 4 cartes « Démo vidéo à venir » dans `index.html` (voir le prompt ci-dessous).
-3. Envoie en ligne :
+Envoyer en ligne :
 
 ```bash
-cd ~/Documents/bahlia-site && git add -A && git commit -m "Ajout des vidéos de démo" && git push
+cd ~/Documents/bahlia-site && git add -A && git commit -m "Remplacement d'une vidéo" && git push
 ```
 
-4. Attends 1 à 2 minutes, puis recharge https://bahlia.fr avec `Cmd + Maj + R`.
-
-**Prompt à copier dans Claude Code**
+## Ajouter une 5ᵉ démo
 
 ```text
-Dans le dépôt bahlia-site, remplace les 4 cartes « Démo vidéo à venir » de index.html par un lecteur vidéo HTML5 qui lit videos/demo-1.mp4, demo-2.mp4, demo-3.mp4 et demo-4.mp4 (dans l'ordre des cartes).
-Chaque vidéo : balise <video> avec controls, playsinline, preload="metadata", même cadre 16/9 et mêmes coins arrondis que le bloc actuel. Pas de lecture automatique avec son.
-Ne change rien d'autre dans la page. Vérifie l'affichage sur mobile et ordinateur, puis fais le commit et le push.
+Dans index.html, ajoute une 5e carte de démo vidéo en copiant le bloc d'une carte existante (celui qui contient un bouton demo-thumb). Remplace data-video, data-poster, data-title, l'image d'aperçu, le titre et la description par : vidéo videos/[NOM].mp4, aperçu videos/[NOM]-poster.jpg, titre « [TITRE] », description « [DESCRIPTION] ». Ne change rien d'autre. Fais le commit et le push.
 ```
+
+Les fichiers `[NOM].mp4` et `[NOM]-poster.jpg` doivent d'abord être dans `videos/`.
 
 ---
 
-## Remplacer le lien de réservation et l'adresse mail
+## Envoyer une modification soi-même (sans Claude)
 
-**Prompt à copier dans Claude Code** (remplace les deux valeurs entre crochets)
+1. Ouvre le Terminal. Le dossier du site est `~/Documents/bahlia-site` (à télécharger une seule fois avec `git clone https://github.com/cmsavary/bahlia-landing-artisans.git bahlia-site`).
+2. Modifie les fichiers, puis :
 
-```text
-Dans le dépôt bahlia-site, dans index.html :
-1. sur les 3 boutons marqués data-reserver, remplace href="#contact" par [LIEN DE RÉSERVATION] ;
-2. sur les 3 boutons marqués data-ecrire, remplace contact@bahlia.fr par [ADRESSE MAIL].
-Ne change rien d'autre. Fais le commit et le push.
+```bash
+cd ~/Documents/bahlia-site && git add -A && git commit -m "Mise à jour du site" && git push
 ```
 
----
+3. Attends 1 à 2 minutes, puis recharge https://bahlia.fr avec `Cmd + Maj + R`.
 
 ## Voir si la mise en ligne a réussi
 
