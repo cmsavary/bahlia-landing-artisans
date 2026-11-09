@@ -10,7 +10,8 @@ Site statique (un seul fichier `index.html`), servi par nginx et déployé autom
 |---|---|
 | Site, HTTPS, polices hébergées avec le site | en ligne |
 | Photos de Céline et de Thierry | en ligne (`photos/celine.jpg`, `photos/thierry.jpg`) |
-| 4 démos vidéo (lecteur qui s'ouvre au clic) | en ligne (`videos/`) |
+| 4 démos vidéo (lecteur qui s'ouvre au clic), avec sous-titres | en ligne (`videos/`) |
+| 4 pages détaillées (une par démo), mentions légales, sitemap, robots.txt | en ligne |
 | Boutons « Écrire un mail » (2) | branchés sur l'adresse Gmail de Céline |
 | Boutons « Parlons-en » et « Réserver un appel en visio » (3) | branchés sur la page de réservation Google Agenda (appel de 30 min, avec Google Meet) |
 
@@ -18,13 +19,18 @@ Site statique (un seul fichier `index.html`), servi par nginx et déployé autom
 
 | Élément | Rôle |
 |---|---|
-| `index.html` | La page complète (styles et lecteur vidéo inclus) |
+| `index.html` | La page d'accueil (styles et lecteur vidéo inclus) |
+| `sms-appel-manque.html`, `devis-automatique.html`, `relance-factures-automatique.html`, `avis-google-automatiques.html` | Une page détaillée par démo |
+| `mentions-legales.html` | Mentions légales et confidentialité (à faire valider, voir plus bas) |
+| `sitemap.xml`, `robots.txt`, `og-image.jpg` | Référencement et aperçu au partage |
 | `fonts/` | Les polices (Fredoka, Nunito), hébergées avec le site |
 | `photos/` | Photos de Céline et de Thierry |
-| `videos/` | 4 vidéos MP4 et leurs images d'aperçu (`-poster.jpg`) |
-| `Dockerfile` | Sert à la mise en ligne, ne pas modifier |
+| `videos/` | 4 vidéos MP4, leurs images d'aperçu (`-poster.jpg`) et leurs sous-titres (`.fr.vtt`) |
+| `Dockerfile`, `.dockerignore`, `docker/default.conf` | Mise en ligne et configuration du serveur : ne pas modifier |
 
-Les 4 démos : `appel-manque-sms`, `devis-en-un-message`, `factures-relancees`, `avis-google` (chacune : un `.mp4` et un `-poster.jpg`).
+Tout le contenu du dépôt est servi sur le site, sauf `README.md`, `Dockerfile`, `.dockerignore` et le dossier `docker/`.
+
+Les 4 démos : `appel-manque-tri`, `devis-en-un-message`, `factures-relancees`, `avis-google` (chacune : un `.mp4`, un `-poster.jpg` et un `.fr.vtt`).
 
 ---
 
@@ -59,10 +65,10 @@ Mets la nouvelle photo carrée (environ 400 x 400 px, moins de 200 Ko) dans `pho
 ## Remplacer une vidéo de démo
 
 Règles pour que ça se passe bien :
-- Même nom de fichier que l'ancienne vidéo (par exemple `videos/avis-google.mp4`) : la page n'a alors pas besoin d'être modifiée.
+- Si tu gardes le même nom de fichier, la page n'a pas besoin d'être modifiée, mais les visiteurs peuvent voir l'ancienne version pendant un mois (cache). Pour une vraie nouvelle version, change le nom (par exemple `avis-google-v2.mp4`) et fais mettre à jour la page, le sitemap et le sous-titre.
+- Si le texte de la vidéo change, mets aussi à jour son sous-titre `.fr.vtt` et sa transcription dans la page.
 - Remplacer aussi l'image d'aperçu `videos/avis-google-poster.jpg` (sans sous-titres incrustés).
 - Format 16/9 (1280 x 720), H.264, son AAC mono, durée d'environ 20 secondes, poids de 0,5 à 1 Mo si possible.
-- Les vidéos sont en cache un mois dans les navigateurs. Si une vidéo remplacée ne change pas à l'écran, utilise un **nouveau nom de fichier** et fais modifier la page en conséquence.
 
 Pour réencoder une vidéo pour le web (ffmpeg) :
 
@@ -103,6 +109,10 @@ cd ~/Documents/bahlia-site && git add -A && git commit -m "Mise à jour du site"
 1. Ouvre Coolify, puis le projet **BahliA**, puis l'application.
 2. Clique sur **Deployment Logs** : un statut **Success** veut dire que le site est à jour.
 3. Si le statut est **Failed**, ouvre la ligne et copie le message d'erreur pour le donner à Claude.
+
+## Mentions légales : à compléter et à faire valider
+
+`mentions-legales.html` indique « société en cours de création » et un numéro SIRET. Des lignes (forme juridique, capital, siège, immatriculation, TVA, téléphone, directeur de la publication, hébergeur) sont en commentaire HTML (`<!-- ... -->`), prêtes à activer quand l'information est connue. Le contenu juridique est à **faire valider** avant de s'y fier.
 
 ## À ne jamais mettre dans ce dépôt
 
