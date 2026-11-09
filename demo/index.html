@@ -51,9 +51,6 @@ html.bahlia-demo-embed .bahlia-demo-badge{box-shadow:0 4px 14px rgba(36,18,77,.1
 .bahlia-demo-state{font-weight:700;font-size:.78em;padding:.15cqw .5cqw;border-radius:999px;background:#EDE6FF;color:#4B3A78;white-space:nowrap}
 .bahlia-demo-row.on .bahlia-demo-state{background:#19C2B4;color:#24124D}
 
-.bahlia-demo-input{position:absolute;left:50%;bottom:1.6cqw;transform:translateX(-50%);width:min(52cqw,calc(100% - 3.2cqw));box-sizing:border-box;display:flex;align-items:center;gap:1cqw;padding:.9cqw 2.2cqw;border-radius:999px}
-.bahlia-demo-field{flex:1;min-width:0;font-weight:600;font-size:clamp(10px,1.45cqw,17px);color:#4B3A78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:not-allowed}
-.bahlia-demo-input .bahlia-demo-btn{font-size:clamp(10px,1.45cqw,17px);padding:.8cqw 2.2cqw}
 
 .bahlia-demo-label{position:absolute;transform:translate(-50%,-100%);display:flex;align-items:center;gap:.5cqw;padding:.25cqw .35cqw .25cqw .9cqw;border-radius:999px;background:#24124D;color:#FFFFFF;font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:clamp(8px,1.3cqw,15px);line-height:1.1;white-space:nowrap;box-shadow:0 3px 8px rgba(36,18,77,.3);transition:box-shadow .3s}
 .bahlia-demo-label b{display:inline-flex;align-items:center;justify-content:center;min-width:1.7em;height:1.7em;box-sizing:border-box;padding:0 .3em;border-radius:999px;background:#EDE6FF;color:#24124D;font-family:'Nunito',system-ui,sans-serif;font-weight:700;font-size:.9em;transition:background .3s}
@@ -69,11 +66,7 @@ html.bahlia-demo-embed .bahlia-demo-badge{box-shadow:0 4px 14px rgba(36,18,77,.1
 
 @media (max-width:640px){
   .bahlia-demo-list{display:none}
-  .bahlia-demo-input{width:calc(100% - 3.2cqw);bottom:1.2cqw;padding:2px 3px 2px 12px}
-  .bahlia-demo-input .bahlia-demo-field,.bahlia-demo-input .bahlia-demo-btn{font-size:11px}
-  .bahlia-demo-input .bahlia-demo-btn{padding:6px 14px}
-  .bahlia-demo-top{top:1.2cqw}
-  .bahlia-demo-label{padding:.15cqw .25cqw .15cqw .7cqw}
+    .bahlia-demo-label{padding:.15cqw .25cqw .15cqw .7cqw}
 }
 @media (prefers-reduced-motion: reduce){.bahlia-demo-bubble{animation:none}}
 </style>
@@ -100,10 +93,6 @@ html.bahlia-demo-embed .bahlia-demo-badge{box-shadow:0 4px 14px rgba(36,18,77,.1
         <button type="button" class="bahlia-demo-btn bahlia-demo-btn-soft" id="bahlia-demo-replay">Rejouer</button>
       </span>
     </header>
-
-    <div class="bahlia-demo-input bahlia-demo-glass">
-      <div class="bahlia-demo-field" id="bahlia-demo-field" aria-disabled="true">Donne une mission à Stratégie…</div>
-    </div>
 
     <div class="bahlia-demo-layer" id="bahlia-demo-bubbles" style="z-index:5"></div>
   </div>
@@ -352,7 +341,7 @@ if(enabled.indexOf('direction')<0)enabled.unshift('direction');
 var RING=['strategie','contenu','design','presentation','compta','rh','ventes'],ANG=[0,51,103,154,206,257,309],RX=170,RY=104;
 
 /* ---------- UI texte ---------- */
-$('title').textContent=S.ui.title;$('badge').textContent=S.ui.badge;$('field').textContent=S.ui.placeholder;
+$('title').textContent=S.ui.title;$('badge').textContent=S.ui.badge;
 $('pause').textContent=S.ui.pause;$('replay').textContent=S.ui.replay;$('listtitle').textContent=S.ui.list;
 
 /* ---------- Bâtiments ---------- */
