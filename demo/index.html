@@ -51,7 +51,7 @@ html.bahlia-demo-embed .bahlia-demo-badge{box-shadow:0 4px 14px rgba(36,18,77,.1
 .bahlia-demo-state{font-weight:700;font-size:.78em;padding:.15cqw .5cqw;border-radius:999px;background:#EDE6FF;color:#4B3A78;white-space:nowrap}
 .bahlia-demo-row.on .bahlia-demo-state{background:#19C2B4;color:#24124D}
 
-.bahlia-demo-input{position:absolute;left:50%;bottom:1.6cqw;transform:translateX(-50%);width:min(52cqw,calc(100% - 3.2cqw));box-sizing:border-box;display:flex;align-items:center;gap:1cqw;padding:.6cqw .6cqw .6cqw 1.8cqw;border-radius:999px}
+.bahlia-demo-input{position:absolute;left:50%;bottom:1.6cqw;transform:translateX(-50%);width:min(52cqw,calc(100% - 3.2cqw));box-sizing:border-box;display:flex;align-items:center;gap:1cqw;padding:.9cqw 2.2cqw;border-radius:999px}
 .bahlia-demo-field{flex:1;min-width:0;font-weight:600;font-size:clamp(10px,1.45cqw,17px);color:#4B3A78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:not-allowed}
 .bahlia-demo-input .bahlia-demo-btn{font-size:clamp(10px,1.45cqw,17px);padding:.8cqw 2.2cqw}
 
@@ -103,7 +103,6 @@ html.bahlia-demo-embed .bahlia-demo-badge{box-shadow:0 4px 14px rgba(36,18,77,.1
 
     <div class="bahlia-demo-input bahlia-demo-glass">
       <div class="bahlia-demo-field" id="bahlia-demo-field" aria-disabled="true">Donne une mission à Stratégie…</div>
-      <button type="button" class="bahlia-demo-btn" id="bahlia-demo-launch">Lancer</button>
     </div>
 
     <div class="bahlia-demo-layer" id="bahlia-demo-bubbles" style="z-index:5"></div>
@@ -353,7 +352,7 @@ if(enabled.indexOf('direction')<0)enabled.unshift('direction');
 var RING=['strategie','contenu','design','presentation','compta','rh','ventes'],ANG=[0,51,103,154,206,257,309],RX=170,RY=104;
 
 /* ---------- UI texte ---------- */
-$('title').textContent=S.ui.title;$('badge').textContent=S.ui.badge;$('field').textContent=S.ui.placeholder;$('launch').textContent=S.ui.launch;
+$('title').textContent=S.ui.title;$('badge').textContent=S.ui.badge;$('field').textContent=S.ui.placeholder;
 $('pause').textContent=S.ui.pause;$('replay').textContent=S.ui.replay;$('listtitle').textContent=S.ui.list;
 
 /* ---------- Bâtiments ---------- */
@@ -602,7 +601,6 @@ document.addEventListener('visibilitychange',function(){if(document.hidden)visib
 requestAnimationFrame(frame);
 
 /* ---------- Boutons ---------- */
-$('launch').addEventListener('click',function(){sim.paused=false;$('pause').textContent=S.ui.pause;startLoop();});
 $('replay').addEventListener('click',function(){sim.paused=false;$('pause').textContent=S.ui.pause;startLoop();});
 $('pause').addEventListener('click',function(){sim.paused=!sim.paused;this.textContent=sim.paused?S.ui.resume:S.ui.pause;});
 window.__bahlia={sim:sim,agents:agents,blds:blds,land:land};
