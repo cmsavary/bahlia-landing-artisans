@@ -1,0 +1,44 @@
+{
+  "enabled": ["direction", "strategie", "contenu", "design", "presentation", "ventes", "rh", "compta"],
+  "departments": {
+    "direction":    { "label": "Direction",    "sub": "Orchestre l'équipe",   "idle": 1, "active": 2 },
+    "strategie":    { "label": "Stratégie",    "sub": "Briefs",               "idle": 0, "active": 3 },
+    "contenu":      { "label": "Contenu",      "sub": "Posts et carrousels",  "idle": 0, "active": 4 },
+    "design":       { "label": "Design",       "sub": "Visuels",              "idle": 0, "active": 5 },
+    "presentation": { "label": "Présentation", "sub": "Decks",                "idle": 0, "active": 2 },
+    "ventes":       { "label": "Ventes",       "sub": "Prospects",            "idle": 2, "active": 3 },
+    "rh":           { "label": "RH",           "sub": "Candidats et CV",      "idle": 1, "active": 2 },
+    "compta":       { "label": "Compta",       "sub": "Factures et relances", "idle": 2, "active": 3 }
+  },
+  "ui": {
+    "title": "BahliA · une campagne en direct",
+    "badge": "Démo fictive",
+    "placeholder": "Donne une mission à Stratégie…",
+    "launch": "Lancer",
+    "pause": "Pause",
+    "resume": "Reprendre",
+    "replay": "Rejouer",
+    "statusOn": "En cours",
+    "statusWait": "En attente",
+    "list": "Départements"
+  },
+  "handoff": "Je passe le relais à {to}",
+  "steps": [
+    { "dept": "direction",    "say": "Brief reçu : campagne d'été pour un client", "work": 4 },
+    { "dept": "strategie",    "say": "Je choisis l'angle et le message clé",       "work": 5 },
+    { "dept": "contenu",      "say": "J'écris les posts et le carrousel",          "work": 5 },
+    { "dept": "design",       "say": "Je dessine les visuels de la campagne",      "work": 5 },
+    { "dept": "presentation", "say": "J'assemble le deck client",                  "work": 5 }
+  ],
+  "finish": {
+    "default": "Deck client prêt",
+    "design": "Visuels prêts pour validation",
+    "presentation": "Deck client prêt"
+  },
+  "finishWork": 4,
+  "background": {
+    "ventes": ["Prospect qualifié", "Relance préparée", "Rendez-vous planifié"],
+    "rh": ["CV analysé", "Candidat présélectionné", "Offre rédigée"],
+    "compta": ["Facture envoyée", "Relance programmée", "Paiement reçu"]
+  }
+}
