@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://bahlia.fr/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://bahlia.fr/videos/appel-manque-tri-poster.jpg</video:thumbnail_loc>
+      <video:title>Appel manqué : urgence ou rendez-vous</video:title>
+      <video:description>Après un appel manqué, le client reçoit un SMS et l'IA trie sa réponse : alerte immédiate pour l'artisan si c'est urgent, prise de rendez-vous en ligne sinon.</video:description>
+      <video:content_loc>https://bahlia.fr/videos/appel-manque-tri.mp4</video:content_loc>
+      <video:duration>24</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://bahlia.fr/videos/devis-en-un-message-poster.jpg</video:thumbnail_loc>
+      <video:title>Un devis en un message</video:title>
+      <video:description>Le message vocal d'un client est transcrit puis transformé automatiquement en devis envoyé en PDF.</video:description>
+      <video:content_loc>https://bahlia.fr/videos/devis-en-un-message.mp4</video:content_loc>
+      <video:duration>19</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://bahlia.fr/videos/factures-relancees-poster.jpg</video:thumbnail_loc>
+      <video:title>Des factures relancées, jusqu'au paiement</video:title>
+      <video:description>Les relances de facture partent automatiquement à intervalles réguliers et s'arrêtent dès que le paiement arrive.</video:description>
+      <video:content_loc>https://bahlia.fr/videos/factures-relancees.mp4</video:content_loc>
+      <video:duration>19</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://bahlia.fr/videos/avis-google-poster.jpg</video:thumbnail_loc>
+      <video:title>Des avis Google, sans y penser</video:title>
+      <video:description>Après chaque intervention, une demande d'avis Google part par SMS et une réponse à l'avis est rédigée et publiée.</video:description>
+      <video:content_loc>https://bahlia.fr/videos/avis-google.mp4</video:content_loc>
+      <video:duration>19</video:duration>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bahlia.fr/sms-appel-manque.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bahlia.fr/devis-automatique.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bahlia.fr/relance-factures-automatique.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bahlia.fr/avis-google-automatiques.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bahlia.fr/mentions-legales.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+</urlset>

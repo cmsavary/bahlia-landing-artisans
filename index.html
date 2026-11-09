@@ -3,10 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BahliA, des solutions sur mesure pour votre quotidien</title>
-<meta name="description" content="Un appel manqué, un devis qui traîne, une facture oubliée… BahliA met en place des solutions sur mesure pour votre quotidien. Parlons-en.">
+<title>BahliA – Automatisation et IA sur mesure pour artisans et TPE</title>
+<meta name="description" content="Un appel manqué, un devis qui traîne, une facture oubliée… BahliA met en place des automatisations et assistants IA sur mesure pour artisans et TPE. Parlons-en.">
+<link rel="canonical" href="https://bahlia.fr/">
 <meta name="theme-color" content="#FFF7EA">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='20' fill='%23FF7A1A'/><circle cx='20' cy='20' r='9' fill='%23FFC93C'/><path d='M4 28c6-5 10 3 16-2s10 3 16-2' fill='none' stroke='%2319C2B4' stroke-width='3.5' stroke-linecap='round'/></svg>">
+
+<!-- Partage sur les réseaux sociaux (LinkedIn, WhatsApp, Facebook, X…) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="BahliA">
+<meta property="og:url" content="https://bahlia.fr/">
+<meta property="og:title" content="BahliA – Automatisation et IA sur mesure pour artisans et TPE">
+<meta property="og:description" content="Appels manqués, devis, factures, avis Google : BahliA automatise votre quotidien avec des solutions sur mesure.">
+<meta property="og:image" content="https://bahlia.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BahliA : automatisation et IA sur mesure pour artisans et TPE">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Polices du titre et du texte courant chargées en priorité -->
+<link rel="preload" href="fonts/fredoka-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Données structurées : l'entreprise et les 4 démos vidéo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://bahlia.fr/#org",
+      "name": "BahliA",
+      "url": "https://bahlia.fr/",
+      "image": "https://bahlia.fr/og-image.jpg",
+      "description": "Automatisation et assistants IA sur mesure pour artisans et TPE : tri des appels manqués et prise de rendez-vous, devis, relance de factures, avis Google.",
+      "email": "celinesavarydesign@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "knowsAbout": [
+        "Automatisation",
+        "Intelligence artificielle",
+        "Assistants IA",
+        "Relance de factures",
+        "Avis Google",
+        "Sécurité des données"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Céline Savary",
+          "jobTitle": "Audit et conception de solutions sur mesure"
+        },
+        {
+          "@type": "Person",
+          "name": "Thierry",
+          "jobTitle": "Sécurité informatique"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bahlia.fr/#site",
+      "url": "https://bahlia.fr/",
+      "name": "BahliA",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://bahlia.fr/#org"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Appel manqué : urgence ou rendez-vous",
+      "description": "Après un appel manqué, le client reçoit un SMS et l'IA trie sa réponse : alerte immédiate pour l'artisan si c'est urgent, prise de rendez-vous en ligne sinon.",
+      "thumbnailUrl": "https://bahlia.fr/videos/appel-manque-tri-poster.jpg",
+      "contentUrl": "https://bahlia.fr/videos/appel-manque-tri.mp4",
+      "uploadDate": "2026-11-07",
+      "duration": "PT24S",
+      "inLanguage": "fr",
+      "transcript": "Sur un chantier, le téléphone sonne… impossible de décrocher. Aussitôt, le client reçoit un SMS : quel est son besoin ? Il répond, et l'IA trie sa demande. Urgent : vous êtes alerté, avec le résumé de la demande. Autre client : l'IA classe sa demande « pas urgent ». Il reçoit un lien de réservation… … et choisit lui-même son créneau. Chaque appel trouve sa réponse.",
+      "publisher": {
+        "@id": "https://bahlia.fr/#org"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Un devis en un message",
+      "description": "Le message vocal d'un client est transcrit puis transformé automatiquement en devis envoyé en PDF.",
+      "thumbnailUrl": "https://bahlia.fr/videos/devis-en-un-message-poster.jpg",
+      "contentUrl": "https://bahlia.fr/videos/devis-en-un-message.mp4",
+      "uploadDate": "2026-11-06",
+      "duration": "PT19S",
+      "inLanguage": "fr",
+      "transcript": "Un client vous laisse un message vocal. Le message est transcrit et compris. Le devis se met en forme automatiquement. Il part aussitôt en PDF vers le client. Vous n'avez plus rien à ressaisir. Un message, un devis.",
+      "publisher": {
+        "@id": "https://bahlia.fr/#org"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Des factures relancées, jusqu'au paiement",
+      "description": "Les relances de facture partent automatiquement à intervalles réguliers et s'arrêtent dès que le paiement arrive.",
+      "thumbnailUrl": "https://bahlia.fr/videos/factures-relancees-poster.jpg",
+      "contentUrl": "https://bahlia.fr/videos/factures-relancees.mp4",
+      "uploadDate": "2026-11-06",
+      "duration": "PT19S",
+      "inLanguage": "fr",
+      "transcript": "Le chantier est terminé : la facture est envoyée. Sans paiement, une relance part toute seule. Les relances se répètent à intervalles réguliers. Dès que le paiement arrive, tout s'arrête. Vous êtes payé, sans avoir rien relancé. Factures payées, sans relancer.",
+      "publisher": {
+        "@id": "https://bahlia.fr/#org"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Des avis Google, sans y penser",
+      "description": "Après chaque intervention, une demande d'avis Google part par SMS et une réponse à l'avis est rédigée et publiée.",
+      "thumbnailUrl": "https://bahlia.fr/videos/avis-google-poster.jpg",
+      "contentUrl": "https://bahlia.fr/videos/avis-google.mp4",
+      "uploadDate": "2026-11-06",
+      "duration": "PT19S",
+      "inLanguage": "fr",
+      "transcript": "L'intervention est terminée, le client est satisfait. Aussitôt, une demande d'avis part par SMS. Le client laisse son avis en quelques secondes. Une réponse polie est rédigée et publiée pour vous. Vos avis s'accumulent, sans y penser. Des avis qui s'accumulent.",
+      "publisher": {
+        "@id": "https://bahlia.fr/#org"
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 @font-face{font-family:'Fredoka';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/fredoka-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Fredoka';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/fredoka-latin-600-normal.woff2') format('woff2')}
@@ -56,13 +183,26 @@ a:focus-visible{outline:3px solid #5B2FC4;outline-offset:3px}
 .demo-box video{height:100vh;width:auto;max-width:100vw;max-height:100vh;border-radius:0}
 .demo-close{top:10px;right:10px;opacity:.9}
 }
+
+/* ---------- Transcription des démos (dépliable) ---------- */
+.more{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-weight:700;font-size:17px;color:#FFC93C;text-decoration:underline;text-underline-offset:4px}
+.more:hover{color:#FFFFFF}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.transcript{margin-top:4px;font-size:15px;color:#EDE6FF}
+.transcript summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;font-weight:700;color:#FFC93C;list-style:none}
+.transcript summary::-webkit-details-marker{display:none}
+.transcript summary::before{content:"▸";margin-right:8px;transition:transform .2s ease}
+.transcript[open] summary::before{transform:rotate(90deg)}
+.transcript summary:focus-visible{outline:3px solid #FFC93C;outline-offset:3px;border-radius:6px}
+.transcript p{margin:4px 0 0;line-height:1.55}
+@media (prefers-reduced-motion: reduce){.transcript summary::before{transition:none}}
 </style>
 </head>
 <body>
 <div style="font-family: 'Nunito', system-ui, sans-serif; color: #4B3A78; line-height: 1.6; background: #FFF7EA">
 
-<!-- ============ ACCROCHE ============ -->
-<div style="background: #FFF7EA">
+<!-- ============ EN-TÊTE ============ -->
+<header style="background: #FFF7EA">
 <div style="max-width: 1080px; margin: 0 auto; padding: 24px 24px 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" aria-label="BahliA, retour en haut" style="display: flex; align-items: center; gap: 10px; color: #24124D">
 <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#FF7A1A"></circle><circle cx="20" cy="20" r="9" fill="#FFC93C"></circle><path d="M4 28c6-5 10 3 16-2s10 3 16-2" fill="none" stroke="#19C2B4" stroke-width="3.5" stroke-linecap="round"></path></svg>
@@ -71,46 +211,57 @@ a:focus-visible{outline:3px solid #5B2FC4;outline-offset:3px}
 <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px">
 <a href="#exemples" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; font-weight: 700; font-size: 16px; color: #24124D">Solutions</a>
 <a href="#qui" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; font-weight: 700; font-size: 16px; color: #24124D">À propos</a>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; font-weight: 700; font-size: 16px; color: #24124D">Contact</a>
 <a href="https://calendar.app.google/KkwJsLguds9uuHg47" target="_blank" rel="noopener" data-reserver data-glass-teal data-glass-btn style="display: inline-block; min-height: 44px; box-sizing: border-box; padding: 10px 24px; border-radius: 999px; font-weight: 700; font-size: 16px; color: #24124D; background: rgba(25,194,180,0.92); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); border: 1px solid rgba(255,255,255,0.45); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45)">Parlons-en</a>
 </nav>
 </div>
+</header>
 
+<main>
+
+<!-- ============ ACCROCHE ============ -->
+<section aria-labelledby="titre-accroche" style="background: #FFF7EA">
 <div id="top" style="max-width: 920px; margin: 0 auto; padding: 112px 24px 128px; text-align: center">
-<h1 style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(36px, 6vw, 66px); line-height: 1.18; color: #24124D">Un appel manqué, un devis qui traîne, <span style="background: #FFC93C; padding: 0 12px; border-radius: 14px; -webkit-box-decoration-break: clone; box-decoration-break: clone">une facture oubliée…</span></h1>
-<p style="margin: 28px 0 0; font-size: clamp(20px, 2.4vw, 25px); color: #4B3A78">Nous avons peut-être la solution. Parlons-en.</p>
+<h1 id="titre-accroche" style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(36px, 6vw, 66px); line-height: 1.18; color: #24124D">Un appel manqué, un devis qui traîne, <span style="background: #FFC93C; padding: 0 12px; border-radius: 14px; -webkit-box-decoration-break: clone; box-decoration-break: clone">une facture oubliée…</span></h1>
+<p style="margin: 28px auto 0; max-width: 760px; font-size: clamp(20px, 2.4vw, 25px); color: #4B3A78"><strong style="color: #24124D">Automatisation et assistants IA sur mesure pour artisans et TPE.</strong> Nous avons peut-être la solution. Parlons-en.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 44px">
 <a href="https://calendar.app.google/KkwJsLguds9uuHg47" target="_blank" rel="noopener" data-reserver data-glass-teal data-glass-btn style="display: inline-block; min-height: 52px; box-sizing: border-box; padding: 14px 32px; border-radius: 999px; font-weight: 700; font-size: 18px; color: #24124D; background: rgba(25,194,180,0.92); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); border: 1px solid rgba(255,255,255,0.45); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45)">Réserver un appel en visio</a>
 <a href="mailto:celinesavarydesign@gmail.com?subject=Premier%20%C3%A9change" data-ecrire data-glass-light data-glass-btn style="display: inline-block; min-height: 52px; box-sizing: border-box; padding: 12px 30px; border-radius: 999px; font-weight: 700; font-size: 18px; color: #24124D; background: rgba(255,255,255,0.6); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); border: 2px solid #24124D; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">Écrire un mail</a>
 </div>
 </div>
-</div>
+</section>
 
 <!-- ============ EXEMPLES ============ -->
-<div id="exemples" style="background: #2B1566; color: #FFFFFF; padding: 104px 0">
+<section id="exemples" aria-labelledby="titre-exemples" style="background: #2B1566; color: #FFFFFF; padding: 104px 0">
 <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px">
-<div style="text-align: center; max-width: 680px; margin: 0 auto">
-<h2 style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; color: #FFFFFF">Quelques exemples de ce qu'on met en place</h2>
+<div style="text-align: center; max-width: 720px; margin: 0 auto">
+<h2 id="titre-exemples" style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; color: #FFFFFF">Automatisations pour artisans et TPE : quelques exemples</h2>
 <p style="margin: 16px 0 0; font-size: 19px; color: #EDE6FF">Chaque solution est ajustée à votre métier et à vos outils.</p>
 </div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 56px">
 
-<!-- Carte 1 : démo vidéo disponible -->
-<div data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
-<button type="button" class="demo-thumb" data-demo-open data-video="videos/appel-manque-sms.mp4" data-poster="videos/appel-manque-sms-poster.jpg" data-title="Appel manqué, SMS automatique" aria-haspopup="dialog" aria-label="Lire la démo vidéo : Appel manqué, SMS automatique (19 secondes)">
-<img src="videos/appel-manque-sms-poster.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aperçu de la vidéo : un SMS automatique est envoyé au client après un appel manqué">
+<!-- Carte 1 -->
+<article data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
+<button type="button" class="demo-thumb" data-demo-open data-video="videos/appel-manque-tri.mp4" data-poster="videos/appel-manque-tri-poster.jpg" data-title="Appel manqué : urgence ou rendez-vous" aria-haspopup="dialog" aria-label="Lire la démo vidéo : Appel manqué : urgence ou rendez-vous (24 secondes)">
+<img src="videos/appel-manque-tri-poster.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aperçu de la vidéo : après un appel manqué, la demande urgente d'une cliente déclenche une alerte sur le téléphone de l'artisan">
 <span class="demo-play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#24124D" aria-hidden="true"><path d="M8 5l11 7-11 7V5z"></path></svg></span>
-<span class="demo-label">Voir la démo · 19 s</span>
+<span class="demo-label">Voir la démo · 24 s</span>
 </button>
 <div style="padding: 24px 8px 8px">
 <span style="display: inline-block; background: #19C2B4; color: #24124D; font-weight: 700; font-size: 14px; padding: 4px 14px; border-radius: 999px">Plomberie · électricité · dépannage</span>
-<h3 style="margin: 14px 0 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; color: #FFFFFF">Appel manqué, SMS automatique</h3>
-<p style="margin: 10px 0 0; font-size: 17px; color: #EDE6FF">Chaque appel non décroché est un chantier perdu. Le client reçoit aussitôt un SMS, sa fiche est créée, et vous le rappelez quand vous êtes disponible.</p>
+<h3 style="margin: 14px 0 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; color: #FFFFFF">Appel manqué : urgence ou rendez-vous</h3>
+<p style="margin: 10px 0 0; font-size: 17px; color: #EDE6FF">Chaque appel non décroché est un chantier perdu. Le client reçoit aussitôt un SMS et l'IA trie sa réponse : si c'est urgent, vous êtes alerté ; sinon, il prend lui-même rendez-vous.</p>
+<a class="more" href="sms-appel-manque.html">En savoir plus<span class="sr-only"> : Appel manqué : urgence ou rendez-vous</span>&nbsp;→</a>
+<details class="transcript">
+<summary>Lire la transcription de la démo</summary>
+<p>Sur un chantier, le téléphone sonne… impossible de décrocher. Aussitôt, le client reçoit un SMS : quel est son besoin ? Il répond, et l'IA trie sa demande. Urgent : vous êtes alerté, avec le résumé de la demande. Autre client : l'IA classe sa demande « pas urgent ». Il reçoit un lien de réservation… … et choisit lui-même son créneau. Chaque appel trouve sa réponse.</p>
+</details>
 </div>
-</div>
+</article>
 
-<!-- Carte 2 : démo vidéo disponible -->
-<div data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
+<!-- Carte 2 -->
+<article data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
 <button type="button" class="demo-thumb" data-demo-open data-video="videos/devis-en-un-message.mp4" data-poster="videos/devis-en-un-message-poster.jpg" data-title="Un devis en un message" aria-haspopup="dialog" aria-label="Lire la démo vidéo : Un devis en un message (19 secondes)">
 <img src="videos/devis-en-un-message-poster.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aperçu de la vidéo : un message vocal de client devient un devis chiffré envoyé en PDF">
 <span class="demo-play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#24124D" aria-hidden="true"><path d="M8 5l11 7-11 7V5z"></path></svg></span>
@@ -120,11 +271,16 @@ a:focus-visible{outline:3px solid #5B2FC4;outline-offset:3px}
 <span style="display: inline-block; background: #FFC93C; color: #24124D; font-weight: 700; font-size: 14px; padding: 4px 14px; border-radius: 999px">Traiteur</span>
 <h3 style="margin: 14px 0 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; color: #FFFFFF">Un devis en un message</h3>
 <p style="margin: 10px 0 0; font-size: 17px; color: #EDE6FF">Une dictée vocale ou le message du client suffit : le devis est mis en forme et envoyé en PDF.</p>
+<a class="more" href="devis-automatique.html">En savoir plus<span class="sr-only"> : Un devis en un message</span>&nbsp;→</a>
+<details class="transcript">
+<summary>Lire la transcription de la démo</summary>
+<p>Un client vous laisse un message vocal. Le message est transcrit et compris. Le devis se met en forme automatiquement. Il part aussitôt en PDF vers le client. Vous n'avez plus rien à ressaisir. Un message, un devis.</p>
+</details>
 </div>
-</div>
+</article>
 
-<!-- Carte 3 : démo vidéo disponible -->
-<div data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
+<!-- Carte 3 -->
+<article data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
 <button type="button" class="demo-thumb" data-demo-open data-video="videos/factures-relancees.mp4" data-poster="videos/factures-relancees-poster.jpg" data-title="Des factures relancées, jusqu'au paiement" aria-haspopup="dialog" aria-label="Lire la démo vidéo : Des factures relancées, jusqu'au paiement (19 secondes)">
 <img src="videos/factures-relancees-poster.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aperçu de la vidéo : les relances de facture partent à intervalles réguliers puis s'arrêtent quand le paiement arrive">
 <span class="demo-play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#24124D" aria-hidden="true"><path d="M8 5l11 7-11 7V5z"></path></svg></span>
@@ -134,11 +290,16 @@ a:focus-visible{outline:3px solid #5B2FC4;outline-offset:3px}
 <span style="display: inline-block; background: #FF7A1A; color: #24124D; font-weight: 700; font-size: 14px; padding: 4px 14px; border-radius: 999px">Artisanat</span>
 <h3 style="margin: 14px 0 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; color: #FFFFFF">Des factures relancées, jusqu'au paiement</h3>
 <p style="margin: 10px 0 0; font-size: 17px; color: #EDE6FF">Les relances partent à intervalles réguliers et s'arrêtent d'elles-mêmes dès que le paiement arrive.</p>
+<a class="more" href="relance-factures-automatique.html">En savoir plus<span class="sr-only"> : Des factures relancées, jusqu'au paiement</span>&nbsp;→</a>
+<details class="transcript">
+<summary>Lire la transcription de la démo</summary>
+<p>Le chantier est terminé : la facture est envoyée. Sans paiement, une relance part toute seule. Les relances se répètent à intervalles réguliers. Dès que le paiement arrive, tout s'arrête. Vous êtes payé, sans avoir rien relancé. Factures payées, sans relancer.</p>
+</details>
 </div>
-</div>
+</article>
 
-<!-- Carte 4 : démo vidéo disponible -->
-<div data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
+<!-- Carte 4 -->
+<article data-glass-dark style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 20px; border-radius: 32px; background: rgba(255,255,255,0.1); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35)">
 <button type="button" class="demo-thumb" data-demo-open data-video="videos/avis-google.mp4" data-poster="videos/avis-google-poster.jpg" data-title="Des avis Google, sans y penser" aria-haspopup="dialog" aria-label="Lire la démo vidéo : Des avis Google, sans y penser (19 secondes)">
 <img src="videos/avis-google-poster.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aperçu de la vidéo : une demande d'avis part après l'intervention, un avis Google arrive et une réponse est publiée">
 <span class="demo-play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#24124D" aria-hidden="true"><path d="M8 5l11 7-11 7V5z"></path></svg></span>
@@ -148,65 +309,72 @@ a:focus-visible{outline:3px solid #5B2FC4;outline-offset:3px}
 <span style="display: inline-block; background: #B9A2F5; color: #24124D; font-weight: 700; font-size: 14px; padding: 4px 14px; border-radius: 999px">Artisanat</span>
 <h3 style="margin: 14px 0 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; color: #FFFFFF">Des avis Google, sans y penser</h3>
 <p style="margin: 10px 0 0; font-size: 17px; color: #EDE6FF">Après chaque intervention, le client reçoit une demande d'avis, puis les réponses aux avis sont prises en charge.</p>
+<a class="more" href="avis-google-automatiques.html">En savoir plus<span class="sr-only"> : Des avis Google, sans y penser</span>&nbsp;→</a>
+<details class="transcript">
+<summary>Lire la transcription de la démo</summary>
+<p>L'intervention est terminée, le client est satisfait. Aussitôt, une demande d'avis part par SMS. Le client laisse son avis en quelques secondes. Une réponse polie est rédigée et publiée pour vous. Vos avis s'accumulent, sans y penser. Des avis qui s'accumulent.</p>
+</details>
 </div>
-</div>
+</article>
 
 </div>
 
 <p style="margin: 72px auto 0; max-width: 740px; text-align: center; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.3; color: #FFFFFF">Ce ne sont que des exemples parmi tout ce que l'IA rend possible. Chez BahliA, chaque solution est ajustée à votre quotidien : <span style="color: #FFC93C">c'est du sur-mesure.</span></p>
 </div>
-</div>
+</section>
 
 <!-- ============ QUI ON EST ============ -->
-<div id="qui" style="background: #FFFFFF; padding: 104px 0">
+<section id="qui" aria-labelledby="titre-qui" style="background: #FFFFFF; padding: 104px 0">
 <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px">
 <div style="text-align: center">
-<h2 style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; color: #24124D">Qui est derrière BahliA</h2>
+<h2 id="titre-qui" style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; color: #24124D">Qui est derrière BahliA</h2>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 48px">
 
-<div style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 28px; border-radius: 28px; background: #FFF4DC; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
-<img src="photos/celine.jpg" alt="Photo de Céline" width="104" height="104" loading="lazy" style="flex: none; width: 104px; height: 104px; border-radius: 50%; object-fit: cover; object-position: center 30%; background: #FFC93C">
+<article style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 28px; border-radius: 28px; background: #FFF4DC; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
+<img src="photos/celine.jpg" alt="Céline Savary, conceptrice de solutions d'automatisation et d'assistants IA chez BahliA" width="104" height="104" loading="lazy" style="flex: none; width: 104px; height: 104px; border-radius: 50%; object-fit: cover; object-position: center 30%; background: #FFC93C">
 <div style="flex: 1 1 240px; min-width: 0">
 <h3 style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 28px; color: #24124D">Céline</h3>
 <p style="margin: 10px 0 0; font-size: 17px; color: #4B3A78">Céline réalise les audits pour repérer ce qui bloque dans votre quotidien, puis conçoit des solutions sur mesure, pensées avec vous (automatisation et assistants IA).</p>
 </div>
-</div>
+</article>
 
-<div style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 28px; border-radius: 28px; background: #E7F9F6; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
-<img src="photos/thierry.jpg" alt="Photo de Thierry" width="104" height="104" loading="lazy" style="flex: none; width: 104px; height: 104px; border-radius: 50%; object-fit: cover; object-position: center 25%; background: #19C2B4">
+<article style="flex: 1 1 440px; min-width: 0; box-sizing: border-box; padding: 28px; border-radius: 28px; background: #E7F9F6; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
+<img src="photos/thierry.jpg" alt="Thierry, développeur en sécurité informatique chez BahliA" width="104" height="104" loading="lazy" style="flex: none; width: 104px; height: 104px; border-radius: 50%; object-fit: cover; object-position: center 25%; background: #19C2B4">
 <div style="flex: 1 1 240px; min-width: 0">
 <h3 style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 500; font-size: 28px; color: #24124D">Thierry</h3>
 <p style="margin: 10px 0 0; font-size: 17px; color: #4B3A78">Thierry est développeur en sécurité informatique depuis 20 ans. Il veille à ce que nos automatisations tiennent dans la durée et protègent les données de vos clients.</p>
 </div>
-</div>
+</article>
 
 </div>
 </div>
-</div>
+</section>
 
 <!-- ============ APPEL À L'ACTION ============ -->
-<div id="contact" style="background: #FFF7EA; padding: 112px 0">
+<section id="contact" aria-labelledby="titre-contact" style="background: #FFF7EA; padding: 112px 0">
 <div style="max-width: 760px; margin: 0 auto; padding: 0 24px; text-align: center">
-<h2 style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 56px); line-height: 1.1; color: #24124D">Parlons-en.</h2>
+<h2 id="titre-contact" style="margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: clamp(36px, 5vw, 56px); line-height: 1.1; color: #24124D">Parlons-en.</h2>
 <p style="margin: 20px 0 0; font-size: 21px; color: #24124D">Un premier échange en visio pour voir ce qui vous ferait gagner du temps.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 40px">
 <a href="https://calendar.app.google/KkwJsLguds9uuHg47" target="_blank" rel="noopener" data-reserver data-glass-teal data-glass-btn style="display: inline-block; min-height: 52px; box-sizing: border-box; padding: 14px 32px; border-radius: 999px; font-weight: 700; font-size: 18px; color: #24124D; background: rgba(25,194,180,0.92); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); border: 1px solid rgba(255,255,255,0.45); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45)">Réserver un appel en visio</a>
 <a href="mailto:celinesavarydesign@gmail.com?subject=Premier%20%C3%A9change" data-ecrire data-glass-light data-glass-btn style="display: inline-block; min-height: 52px; box-sizing: border-box; padding: 12px 30px; border-radius: 999px; font-weight: 700; font-size: 18px; color: #24124D; background: rgba(255,255,255,0.6); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); border: 2px solid #24124D; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">Écrire un mail</a>
 </div>
 </div>
-</div>
+</section>
+
+</main>
 
 <!-- ============ PIED DE PAGE ============ -->
-<div style="background: #24124D; color: #EDE6FF; padding: 40px 0">
+<footer style="background: #24124D; color: #EDE6FF; padding: 40px 0">
 <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <div style="display: flex; align-items: center; gap: 10px">
 <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#FF7A1A"></circle><circle cx="20" cy="20" r="9" fill="#FFC93C"></circle><path d="M4 28c6-5 10 3 16-2s10 3 16-2" fill="none" stroke="#19C2B4" stroke-width="3.5" stroke-linecap="round"></path></svg>
 <span style="font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 22px; color: #FFFFFF">BahliA</span>
 </div>
-<div style="font-size: 15px">© 2026 BahliA · Mentions légales</div>
+<div style="font-size: 15px">© 2026 BahliA · <a href="mentions-legales.html" style="color: #EDE6FF; text-decoration: underline">Mentions légales et confidentialité</a></div>
 </div>
-</div>
+</footer>
 
 </div>
 
@@ -236,6 +404,15 @@ a:focus-visible{outline:3px solid #5B2FC4;outline-offset:3px}
     vid.preload = 'auto';
     vid.poster = btn.getAttribute('data-poster') || '';
     vid.setAttribute('aria-label', btn.getAttribute('data-title') || 'Démo vidéo');
+    // Piste de sous-titres texte (désactivée par défaut : les sous-titres sont déjà incrustés dans l'image).
+    // Elle sert aux lecteurs d'écran et aux outils d'accessibilité.
+    Array.prototype.forEach.call(vid.querySelectorAll('track'), function (t) { t.remove(); });
+    var tr = document.createElement('track');
+    tr.kind = 'captions';
+    tr.srclang = 'fr';
+    tr.label = 'Français';
+    tr.src = src.replace(/\.mp4$/, '.fr.vtt');
+    vid.appendChild(tr);
     vid.src = src;
     loaded = src;
     vid.load();
