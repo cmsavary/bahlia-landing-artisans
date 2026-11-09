@@ -200,25 +200,17 @@ function facade(x,bx,by,a,b,h,act,awn,doorTile){
 
 var UP=50; /* marge au-dessus du coin haut de l'empreinte */
 var BUILD={
-  direction:{a:5,b:5,up:62,lab:50,draw:function(x,bx,by,act){
-    /* socle en pierre claire avec vague teal */
-    box(x,bx,by,5,5,12,C.cream2,dark(C.cream2,.14),'#FFFBF0');
-    var P=wallPts(bx,by,5,5);bandL(x,P,40,5,C.teal);bandR(x,P,40,5,C.teal);
-    var cy=by-12+20;
-    ell(x,dark('#FFFBF0',.12),bx,cy+1,26,12);ell(x,'#FFFBF0',bx,cy-1,24,11);
-    ell(x,dark(C.rose,.45),bx,cy+2,22,8);
-    /* cerveau : deux hémisphères */
-    var base=act?'#FFD3DB':C.rose,mid=dark(base,.12),low=dark(base,.24),hi=light(base,.65),bcy=cy-17;
-    x.fillStyle=low;x.fillRect(bx-4,bcy+16,8,7);
-    function lobe(cx,sgn){
-      ell(x,low,cx,bcy+1,18,22);ell(x,base,cx-sgn*1,bcy-1,17,21);ell(x,mid,cx+sgn*4,bcy+4,11,14);
-      for(var yy=-18;yy<=18;yy+=5)for(var xx=-17;xx<=17;xx++){var px=cx+xx,py=bcy+yy+Math.round(2*Math.sin(xx/2.8+yy*.5));
-        var d=(xx*xx)/(16*16)+((py-bcy)*(py-bcy))/(20*20);if(d<.9){x.fillStyle=dark(base,.34);x.fillRect(px,py,1,1);}}
-      ell(x,hi,cx-sgn*7,bcy-14,4,1);x.fillStyle='#FFFFFF';x.fillRect(cx-sgn*10,bcy-10,3,1);
-    }
-    lobe(bx-14,1);lobe(bx+14,-1);
-    x.fillStyle=dark(base,.5);x.fillRect(bx-1,bcy-21,2,40);
-    if(act){[[-20,-12],[18,-16],[-6,-22],[22,0],[-22,6],[4,-8]].forEach(function(p){x.fillStyle=C.yellow;x.fillRect(bx+p[0],bcy+p[1],2,2);});}
+  direction:{a:5,b:5,up:64,lab:50,draw:function(x,bx,by,act){
+    var cl=C.cream2,cr=dark(C.cream2,.14),ct='#FFFBF0';
+    box(x,bx,by,5,5,24,cl,cr,ct);
+    var P=wallPts(bx,by,5,5);bandL(x,P,40,13,C.teal);bandR(x,P,40,13,C.teal);
+    facade(x,bx,by,5,5,22,act,C.yellow);
+    var by2=by-24+8;
+    box(x,bx,by2,3,3,16,C.lav,dark(C.lav,.16),'#F6F1FF');
+    var P2=wallPts(bx,by2,3,3),g=act?'#FFD65C':'#9AD7E6';
+    winL(x,P2,3,5,5,7,g,'#FFFFFF');winL(x,P2,16,5,5,7,g,'#FFFFFF');winR(x,P2,3,5,5,7,g,'#FFFFFF');winR(x,P2,16,5,5,7,g,'#FFFFFF');
+    var A=hip(x,bx,by2,3,3,16,15,C.indigo2);
+    sun(x,A[0],A[1]-4,4);
   }},
   strategie:{a:4,b:4,up:50,lab:42,draw:function(x,bx,by,act){
     box(x,bx,by,4,4,28,C.cream2,dark(C.cream2,.14),'#FFFBF0');
@@ -587,7 +579,7 @@ function draw(){
   /* nuages */
   clouds.forEach(function(c){var x=((c.x+T*c.v)%(W+120))-60;ctx.globalAlpha=.92;ctx.drawImage(c.s,Math.round(x),c.y);});ctx.globalAlpha=1;
   /* bulles */
-  for(var bid in bubbles){var bp=bubblePos[bid];if(bid==='direction'&&blds.direction)bp=[blds.direction.sx[0],blds.direction.sx[1]-blds.direction.cfg.lab-12];if(!bp)continue;var el=bubbles[bid].el;el.style.left=Math.max(10,Math.min(90,bp[0]/W*100))+'%';el.style.top=(bp[1]-2)/H*100+'%';}
+  for(var bid in bubbles){var bp=bubblePos[bid];if(!bp)continue;var el=bubbles[bid].el;el.style.left=Math.max(10,Math.min(90,bp[0]/W*100))+'%';el.style.top=(bp[1]-2)/H*100+'%';}
 }
 
 /* ---------- Boucle d'animation ---------- */
